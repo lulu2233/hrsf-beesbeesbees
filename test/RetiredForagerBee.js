@@ -25,6 +25,7 @@ describe('RetiredForagerBee class functionality', function() {
   });
 
   it('should have a `forage` method that returns "I am too old, let me play cards instead"', function() {
+    console.log(retiredForager);
     expect(retiredForager.forage()).to.equal('I am too old, let me play cards instead');
   });
 
