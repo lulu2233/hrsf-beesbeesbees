@@ -37,6 +37,7 @@ describe('HoneyMakerBee class functionality', function() {
   });
 
   it('should have a `makeHoney` method that adds `1` to that honeyBee\'s honeyPot', function() {
+    console.log(honeyBee);
     expect(honeyBee.makeHoney).to.be.a('function');
     honeyBee.makeHoney();
     expect(honeyBee.honeyPot).to.equal(1);
@@ -52,5 +53,11 @@ describe('HoneyMakerBee class functionality', function() {
     honeyBee.giveHoney();
     expect(honeyBee.honeyPot).to.equal(2);
   });
+
+  it('"giveHoney" method should handle the situation when honeyPot is empty', function() {
+    expect(honeyBee.giveHoney).to.be.a('function');
+    honeyBee.giveHoney();
+    expect(honeyBee.honeyPot).to.equal(0);
+  })
 
 });
